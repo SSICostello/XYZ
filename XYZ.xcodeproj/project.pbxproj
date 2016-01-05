@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02E64EFE1C2E2437006170DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02E64EFD1C2E2437006170DB /* main.cpp */; };
+		02516FB21C349792004BB520 /* orbit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02516FB01C349792004BB520 /* orbit.cpp */; };
+		02516FB41C349CEE004BB520 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02516FB31C349CEE004BB520 /* main.cpp */; };
+		02E64F081C2E25C5006170DB /* rk4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02E64F061C2E25C5006170DB /* rk4.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02194FCF1C3982050080C093 /* init.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = init.hpp; sourceTree = "<group>"; };
+		02516FB01C349792004BB520 /* orbit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = orbit.cpp; sourceTree = "<group>"; };
+		02516FB11C349792004BB520 /* orbit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = orbit.hpp; sourceTree = "<group>"; };
+		02516FB31C349CEE004BB520 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
 		02E64EFA1C2E2437006170DB /* XYZ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XYZ; sourceTree = BUILT_PRODUCTS_DIR; };
-		02E64EFD1C2E2437006170DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		02E64F061C2E25C5006170DB /* rk4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = rk4.cpp; path = ../../../Math/rk4.cpp; sourceTree = "<group>"; };
+		02E64F071C2E25C5006170DB /* rk4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rk4.h; path = ../../../Math/rk4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,12 @@
 		02E64EFC1C2E2437006170DB /* XYZ */ = {
 			isa = PBXGroup;
 			children = (
-				02E64EFD1C2E2437006170DB /* main.cpp */,
+				02516FB31C349CEE004BB520 /* main.cpp */,
+				02194FCF1C3982050080C093 /* init.hpp */,
+				02E64F061C2E25C5006170DB /* rk4.cpp */,
+				02516FB01C349792004BB520 /* orbit.cpp */,
+				02516FB11C349792004BB520 /* orbit.hpp */,
+				02E64F071C2E25C5006170DB /* rk4.h */,
 			);
 			path = XYZ;
 			sourceTree = "<group>";
@@ -118,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E64EFE1C2E2437006170DB /* main.cpp in Sources */,
+				02E64F081C2E25C5006170DB /* rk4.cpp in Sources */,
+				02516FB21C349792004BB520 /* orbit.cpp in Sources */,
+				02516FB41C349CEE004BB520 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +221,7 @@
 		02E64F021C2E2437006170DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/Cellar/eigen/3.2.6/include/eigen3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +229,7 @@
 		02E64F031C2E2437006170DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/eigen/3.2.6/include/eigen3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +253,7 @@
 				02E64F031C2E2437006170DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
