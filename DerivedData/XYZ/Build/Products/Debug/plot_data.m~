@@ -1,0 +1,6 @@
+
+Data = importdata('osc.txt');
+plot(Data(:,2),Data(:,3))
+axis('square')
+grid
+

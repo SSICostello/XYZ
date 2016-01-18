@@ -11,6 +11,7 @@
 
 const double Mu = 398600.418e9; /* m^3/sec^2 */
 const double Re = 6378.14e3; /* m */
-const double Tm = 1.5; /* thrust-to-weight ratio */
+const double GEarth = 9.81; /* m/s^2 */
+const double Tm = 1.2 * GEarth; /* thrust-to-weight ratio */
 
 #endif /* orbit_hpp */
