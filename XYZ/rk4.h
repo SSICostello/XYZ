@@ -4,6 +4,8 @@
  *
  *  Created by tobin on 10/1/08.
  *  Copyright 2008 __MyCompanyName__. All rights reserved.
+ *  
+ *  Simple commment added to test GIT
  *
  */
 #include <cmath>
